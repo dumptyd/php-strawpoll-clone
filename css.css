@@ -1,0 +1,42 @@
+html,body
+{
+	min-height:100%;
+	width:100%;
+	margin:0;
+	padding:0;
+	background: #e6e6e6 !important;
+}
+
+
+.navbar-brand
+{
+	font-weight:bold;
+}
+
+.app-container
+{
+	max-width:600px;
+	margin:0 auto;
+}
+
+.top-gutter{margin-top:20px;}
+
+.btn{font-weight:bold !important;}
+
+.question > h3
+{
+	line-height:1.2em;
+	font-weight:bold;
+}
+
+.radio-btn{margin-left:15px;}
+
+.progress{height:10px !important;}
+
+.well
+{
+	background-color:#d4d4d4 !important;
+	word-wrap: break-word !important;
+}
+
+a{display:block;}

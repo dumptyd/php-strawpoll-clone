@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <title>Poll me down</title>
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href="css.css" rel="stylesheet" type="text/css">
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+	  <script src="js.js"></script>
+	  
+	</head>
+	
+	<body>
+	
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				  <a href='index.html' class="navbar-brand">Poll me down</a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container-fluid">
+			<div class="app-container" ng-app="pollApp" ng-controller="pollController">
+				
+				<div class="well well-lg">
+					
+					<div class="form-group">
+						<label>Question:</label>
+						<input type="text" ng-model="question" class="form-control input-lg"><hr size=10>
+					</div>
+					<div class="options" >
+						<div class="form-group row" ng-repeat="x in inputs">
+							<div class="col-md-3"><label>Option {{x.index}}:</label></div>
+							<div class="col-md-9"><input type="text" ng-model="x.val" class="form-control"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<button class="btn btn-primary btn-block" ng-click="addOption()">Add option</button>
+						</div>
+						<div class="col-md-6">
+							<button class="btn btn-success btn-block" ng-click="submit()">Create poll</button>
+						</div>
+					</div>
+				
+				</div>
+				
+				<div ng-show="err" class="well-sm text-danger bg-danger">{{errorString}}</div>
+				
+			</div>
+		</div>
+	</body>
+</html>
